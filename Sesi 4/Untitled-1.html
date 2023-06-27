@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rumus Volume Kubus</title> 
+    <script>
+        function hitungVolume() {
+            // Inputan Rumus Volume Kubus:
+            var sisiKubus = parseFloat(document.getElementById("sisi").value); // Mendapatkan nilai sisi kubus dari input
+
+            // Perhitungan Langkah untuk Rumus Volume Kubus:
+            var volumeKubus = Math.pow(sisiKubus, 3); // Menghitung volume kubus dengan memangkatkan sisi kubus dengan pangkat 3
+
+            // Hasil/Output Rumus Volume Kubus:
+            document.getElementById("hasil").innerHTML = "Volume kubus: " + volumeKubus.toFixed(2) + " satuan^3";
+        }
+    </script>
+</head>
+<body>
+    <h3>008</h3>
+    <h3>Amirudin</h3>
+    <h3>Sesi 4</h3>
+    <h1>Rumus Volume Kubus</h1>
+    <label for="sisi">Sisi Kubus:</label>
+    <input type="number" id="sisi" name="sisi" required>
+    <button onclick="hitungVolume()">Hitung</button>
+    <p id="hasil"></p>
+</body>
+</html>
