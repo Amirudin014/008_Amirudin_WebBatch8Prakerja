@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hitung Angka Mundur dan Maju</title>
+    <script>
+      var currentNumber = 0; // Angka saat ini
+
+      function displayNumber() {
+        var output = document.getElementById("output");
+        output.innerHTML = currentNumber;
+      }
+
+      function hitungMundur() {
+        currentNumber--;
+        displayNumber();
+      }
+
+      function hitungMaju() {
+        currentNumber++;
+        displayNumber();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Hitung Angka Mundur dan Maju</h1>
+    <button onclick="hitungMundur()">Mundur</button>
+    <button onclick="hitungMaju()">Maju</button>
+    <br /><br />
+    <div id="output"></div>
+
+    <script>
+      displayNumber(); // Menampilkan angka awal saat halaman dimuat
+    </script>
+
+    <!--Referensi: ChatGPT-->
+    <br />
+    <p>
+      Referensi:
+      <a href="https://chat.openai.com/" target="_blank"
+        >https://chat.openai.com/</a
+      >
+    </p>
+  </body>
+</html>

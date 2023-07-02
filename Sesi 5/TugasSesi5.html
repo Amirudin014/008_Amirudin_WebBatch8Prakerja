@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Latihan</title>
+    <style>
+      ol {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cetak Pesan Berulang Kali</h1>
+
+    <label for="pesanInput">Pesan:</label>
+    <input type="text" id="pesanInput" /><br />
+
+    <label for="berapaKaliInput">Berapa kali:</label>
+    <input type="number" id="berapaKaliInput" /><br />
+
+    <button onclick="cetakPesan()">Cetak!</button>
+
+    <div id="output"></div>
+
+    <script>
+      function cetakPesan() {
+        var pesanInput = document.getElementById("pesanInput").value;
+        var berapaKaliInput = parseInt(
+          document.getElementById("berapaKaliInput").value
+        );
+
+        var outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = ""; // Menghapus konten sebelumnya
+
+        var ol = document.createElement("ol"); // Membuat elemen <ol>
+
+        for (var i = 0; i < berapaKaliInput; i++) {
+          var li = document.createElement("li"); // Membuat elemen <li>
+          li.textContent = pesanInput;
+          ol.appendChild(li);
+        }
+
+        outputDiv.appendChild(ol);
+      }
+    </script>
+  </body>
+</html>

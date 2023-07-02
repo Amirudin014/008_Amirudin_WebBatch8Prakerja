@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Judul algoritma-->
+    <title>Kalkulator Lingkaran</title>
+  </head>
+
+  <body>
+    <script>
+      function hitung() {
+        // Mendapatkan nilai panjang jari-jari dari input
+        var radius = parseFloat(document.getElementById("radius").value);
+
+        // Menghitung luas dan keliling lingkaran
+        var luas = Math.PI * Math.pow(radius, 2);
+        var keliling = 2 * Math.PI * radius;
+
+        // Menampilkan hasil kalkulasi
+        document.getElementById("luas").innerHTML = luas.toFixed(2);
+        document.getElementById("keliling").innerHTML = keliling.toFixed(2);
+      }
+    </script>
+    <h1>Kalkulator Lingkaran</h1>
+    <form>
+      <p>
+        Nama: Amirudin<br />
+        Kode Peserta: 008<br />
+        Batch: 8
+      </p>
+    
+      <h2>Masukkan Panjang Jari-Jari Lingkaran</h2>
+      <input type="number" id="radius" step="0.01" />
+      <button type="button" onclick="hitung()">Hitung</button>
+
+      <h2>Hasil Kalkulasi</h2>
+      <p>Luas: <span id="luas"></span></p>
+      <p>Keliling: <span id="keliling"></span></p>
+    </form>
+    <br />
+    <p></p>
+    <!--Sumber: https://chat.openai.com/-->
+    Sumber:
+    <a href="https://chat.openai.com/" target="_blank">Chat OpenAI</a>
+  </body>
+</html>
