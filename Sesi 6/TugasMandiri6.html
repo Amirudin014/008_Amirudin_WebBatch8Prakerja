@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tugas Mandiri 6</title>
+    <style>
+      #myParagraph {
+        font-size: 15.5px;
+        line-height: 30px;
+      }
+
+      .animation1 {
+        animation: colorChange1 1s linear infinite;
+      }
+
+      .animation2 {
+        animation: colorChange2 1s linear infinite;
+      }
+
+      .animation3 {
+        animation: colorChange3 1s linear infinite;
+      }
+
+      @keyframes colorChange1 {
+        0% {
+          color: black;
+        }
+        51% {
+          color: red;
+        }
+      }
+
+      @keyframes colorChange2 {
+        0% {
+          color: black;
+        }
+        51% {
+          color: green;
+        }
+      }
+
+      @keyframes colorChange3 {
+        0% {
+          color: black;
+        }
+        51% {
+          color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p id="myParagraph">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quaerat
+      recusandae qui ullam eaque cumque ea fugit, debitis commodi ipsum illo
+      dolorum consequatur sed laudantium suscipit quis magni, maiores in?
+    </p>
+
+    <script>
+      var paragraph = document.getElementById("myParagraph");
+      var text = paragraph.innerText;
+      var lines = text.split(" ");
+
+      var newHTML = "";
+
+      for (var i = 0; i < 3; i++) {
+        for (var j = 0; j < lines.length; j++) {
+          var line = lines[j];
+          var animationClass;
+
+          if (i === 0) {
+            animationClass = "animation1";
+          } else if (i === 1) {
+            animationClass = "animation2";
+          } else {
+            animationClass = "animation3";
+          }
+
+          newHTML +=
+            '<span class="' + animationClass + '">' + line + "</span> ";
+        }
+      }
+
+      paragraph.innerHTML = newHTML;
+    </script>
+  </body>
+</html>
